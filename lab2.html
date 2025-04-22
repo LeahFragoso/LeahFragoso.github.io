@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Lab Two - Objects</title>
+    <script src="p5.min.js"></script>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      #header {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        font-size: 24px;
+        font-weight: bold;
+        color: saddlebrown;
+        background-color: #ffe5d0;
+        z-index: 10;
+        padding: 10px 15px;
+        border: 2px, solid;
+        border-radius: 10px;
+      }
+
+      #nav-container {
+        position: absolute;
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 10;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        padding: 12px 24px;
+      }
+
+      #nav-container a {
+        text-decoration: none;
+        font-size: 40px;
+        color: #000000;
+        transition: transform 0.2s ease;
+      }
+
+      #nav-container a:hover {
+        transform: scale(1.2);
+      }
+    </style>
+  </head>
+  <body>
+  <div id="header">
+      Lab Two - Objects
+  </div>
+  <div id="nav-container">
+      <a href="index.html" title="Go back to homepage">◀</a>
+      <a href="lab3.html" title="Go to next lab">▶</a>
+
+   <script src="lab2.js"></script>
+  </body>
+</html>
