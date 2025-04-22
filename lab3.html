@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Lab Three - Graphical User Interface</title>
+    <script src="p5.min.js"></script>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      #header {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        font-size: 24px;
+        font-weight: bold;
+        color: saddlebrown;
+        background-color: #ffe5d0;
+        z-index: 10;
+        padding: 10px 15px;
+        border: 2px, solid;
+        border-radius: 10px;
+      }
+
+      #nav-container {
+        position: absolute;
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 10;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        padding: 12px 24px;
+      }
+
+      #nav-container a {
+        text-decoration: none;
+        font-size: 40px;
+        color: #000000;
+        transition: transform 0.2s ease;
+      }
+
+      #nav-container a:hover {
+        transform: scale(1.2);
+      }
+
+      .gui-container {
+        position: fixed;
+        top: 100px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        z-index: 5; 
+        font-family: Arial, sans-serif;
+      }
+
+      .label {
+        font-family:Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        margin-bottom: 5px;
+        color: #333;
+      }
+
+      .color-picker,
+      .bg-color-picker {
+        width: 80px;
+        height: 30px;
+        margin: 10px;
+        border-radius: 5px;
+        border: 2px solid #ccc;
+      }
+
+      .slider {
+        width: 150px;
+        height: 20px;
+        margin: 10px;
+        border-radius: 10px;
+        background-color: #f1f1f1;
+      }
+
+    .clear-btn {
+        padding: 10px 20px;
+        background-color: #f44336;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        transition: background-color 0.3s;
+      }
+
+      .clear-btn:hover {
+        background-color: #e53935;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="header">
+      Lab Three - Graphical User Interface
+    </div>
+    <div id="nav-container">
+      <a href="index.html" title="Go back to homepage">◀</a>
+      <a href="lab4.html" title="Go to next lab">▶</a>
+    </div>
+    
+    <script src="lab3.js"></script>
+  </body>
+</html>
