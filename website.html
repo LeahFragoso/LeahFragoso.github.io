@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="UTF-8">
+        <title>
+            Leah's Homepage
+        </title>
+        <script src="p5.min.js"></script>
+        <style>
+
+            @font-face {
+                font-family: 'Canela';
+                src: url('assets/fonts/Canela.otf');
+                font-weight: normal;
+                font-style: normal;
+            }
+
+            body{
+                background: #ffe5d0;
+                font-family: Canela;
+                overflow-x: hidden;
+            }
+
+            canvas{
+                position:absolute;
+                top: 0;
+                bottom: 0;
+                z-index: -1;
+            }
+            
+            .portrait {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-top: 20px;
+            }
+
+            .portrait img {
+                max-height: 200px;
+                width: auto;
+                object-fit: cover;
+                border-radius: 50%;
+                margin-left: 50px;
+            }
+
+            .name {
+                width: 100%;
+                text-align: center;
+                color: rgb(194, 97, 28);
+            }
+
+            #name h1 {
+                margin: 0;
+                padding: 20px 0;
+                font-size: 15vw;
+                line-height: 1;
+                white-space: nowrap;
+            }
+            .header-container {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 30px;
+                background-color: rgba(199, 156, 156, 0.438);
+                padding: 0 175px;
+            }
+
+            .dropdown {
+                position: relative;
+                display: inline-block;
+            }
+
+            .dropbtn {
+                font-family: Arial, Helvetica, sans-serif;
+                font-weight: bold;
+                font-size: 20px;
+                color: rgb(194, 97, 28);
+                background: transparent;
+                border: none;
+                cursor: pointer;
+                border-radius: 8px;
+            }
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                background-color: white;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+                border-radius: 8px;
+            }
+
+            .dropdown-content a {
+                color: black;
+                padding: 10px 15px;
+                text-decoration: none;
+                display: block;
+            }
+
+            .dropdown-content a:hover {
+                background-color: chocolate;
+            }
+
+            .dropdown:hover .dropdown-content {
+                display: block;
+            }
+
+            .dropdown:hover .dropbtn {
+                background-color: chocolate;
+            }
+
+            .about h2 {
+                font-family: Canela;
+                color:  rgb(194, 97, 28);
+                margin-bottom: -10px;
+            }
+            .about h1 {
+                font-size: 45px;
+                color:  rgb(199, 156, 156);
+            }
+            .about {
+                color: rgb(194, 97, 28);
+                position: fixed;
+                bottom: 100px;
+                left: 20px;
+                max-width: 550px;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 16px;
+                line-height: 1.6;
+                padding: 10px;
+                border-radius: 4px;
+            }
+
+            .about a {
+                color:  rgb(199, 156, 156);
+                text-decoration: none;
+            }
+
+            .about a:hover {
+                text-decoration: underline;
+            }
+        </style>
+    </head>
+    <body>
+
+        <!--image-->
+        <div class="portrait">
+            <img src="assets/portrait.png" alt="Leah">
+        </div>
+
+        <!-- Organizational container -->
+        <div class="header-container">
+
+            <!-- future assignment links -->
+            <div class="assignments">
+                <div class="dropdown left-menu">
+                    <button class="dropbtn">⋆ASSIGNMENTS⋆</button>
+                    <div class="dropdown-content">
+                     <a href="assignment2.html">Assignment 2</a>
+                     <a href="assignment3.html">Assignment 3</a>
+                     <a href="assignment4.html">Assignment 4</a>
+                     <a href="assignment5.html">Assignment 5</a>
+                     <a href="final-project.html">Final Project</a>
+                    </div>
+              </div>
+           </div>
+            
+           <div class="name">
+             <h1> Leah 𔓘 Fragoso </h1>
+            </div>
+  
+            <!-- future lab links -->
+            <div class="dropdown right-menu">
+                <button class="dropbtn"> ⋆LABS⋆</button>
+                <div class="dropdown-content">
+                    <a href="lab1.html">Lab 1</a>
+                    <a href="lab2.html">Lab 2</a>
+                    <a href="lab3.html">Lab 3</a>
+                    <a href="lab4.html">Lab 4</a>
+                    <a href="lab5.html">Lab 5</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="about">
+            <h2>｡꩜˚⋆   Hello World   ⋆˚꩜｡</h2>
+            <h1 class="fish"></h1>
+            <p> My name is Leah Fragoso. I am a 2nd year Graphic Design student at
+                <a href="https://www.ocadu.ca/">OCAD University</a>.
+                This is my homepage where you will find all of my assignments for my
+                <a href="https://canvascloud.ocadu.ca/courses/10684">Intro to Comp Sci-Logic and Coding class</a>.
+            </p>
+        </div>
+        <script src="sketch.js"></script>
+    </body>
+</html>
