@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Assignment Four - P5 + Arrays</title>
+        <script src="p5.min.js"></script>
+        <style>
+            body {
+                margin: 0;
+                background-color: bisque;
+                font-family: Arial, sans-serif;
+                color: #333;
+            }
+
+            #header {
+                position: absolute;
+                top: 20px;
+                left: 20px;
+                font-size: 24px;
+                font-weight: bold;
+                color: saddlebrown;
+                background-color: #ffe5d0;
+                z-index: 10;
+                padding: 10px 15px;
+                border: 2px, solid;
+                border-radius: 10px;
+
+            }  #nav-container {
+                position: absolute;
+                top: 20px;
+                left: 50%;
+                transform: translateX(-50%);
+                z-index: 10;
+                display: flex;
+                align-items: center;
+                gap: 20px;
+                padding: 12px 24px;
+            }
+
+            #nav-container a {
+                text-decoration: none;
+                font-size: 40px;
+                color: #000000;
+                transition: transform 0.2s ease;
+            }
+
+            #nav-container a:hover {
+                transform: scale(1.2);
+            }
+            #partyButton {
+                position:absolute;
+                align-items: center;
+                top: 50%;
+                padding: 15px 30px;
+                background-color: #f7883f;
+                color: white;
+                font-size: 18px;
+                border-radius: 8px;
+                border: none;
+                cursor: pointer;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+                transition: all 0.3s ease-in-out;
+            }
+    
+            #partyButton:hover {
+                background-color: #ffb46e;
+                transform: scale(1.1);
+            }
+    
+            #partyButton:active {
+                background-color: #ff3333;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            }
+        </style>
+    </head>
+    <body>
+        <div id="header">
+            Assignment Four - P5 + Arrays
+        </div>
+    
+        <div id="nav-container">
+            <a href="index.html" title="Go back to homepage">◀</a>
+            <a href="assignment5.html" title="Go to next assignment">▶</a>
+        </div>
+        <button id="partyButton">Party</button>
+    
+        <script src="assignment4.js"></script>
+    </body>
+</html>
