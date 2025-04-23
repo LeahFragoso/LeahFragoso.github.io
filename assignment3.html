@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>'Text Adventure' in P5.js with Events</title>
+        <script src="p5.min.js"></script>
+        <style>
+            body {
+            margin: 0;
+            background-color: #0a0a0a;
+            font-family: sans-serif;
+            color: white;
+            }
+            .search-bar-container {
+                display: flex;
+                align-items: center;
+                gap: 15px;
+                justify-content: center;
+            }
+
+                #wordInput {
+                width: 600px;
+                max-width: 90%;
+                padding: 16px 24px;
+                font-size: 20px;
+                border: 1px solid #dfe1e5;
+                border-radius: 30px;
+                outline: none;
+                box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
+                transition: box-shadow 0.3s ease;
+            }
+
+                #wordInput:focus {
+                box-shadow: 0 1px 8px rgba(60, 64, 67, 0.3);
+                border: 1px solid #4285f4;
+            }
+
+                button {
+                padding: 12px 20px;
+                font-size: 16px;
+                background-color: #ff7b00;
+                color: white;
+                border: none;
+                border-radius: 6px;
+                cursor: pointer;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+                transition: background-color 0.2s ease;
+            }
+
+            button:hover {
+                background-color: #66400f;
+            }
+
+            .controls {
+                position: fixed;
+                top: 35%; 
+                left: 50%;
+                transform: translate(-50%, -50%);
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+                z-index: 10;
+            }
+
+            #header {
+                position: absolute;
+                top: 20px;
+                left: 20px;
+                font-size: 24px;
+                font-weight: bold;
+                color: saddlebrown;
+                background-color: #ffe5d0;
+                z-index: 10;
+                padding: 10px 15px;
+                border: 2px, solid;
+                border-radius: 10px;
+            }
+
+            #speedSlider {
+                accent-color: orange;
+            }
+
+            #nav-container {
+                position: absolute;
+                top: 20px;
+                left: 50%;
+                transform: translateX(-50%);
+                z-index: 10;
+                display: flex;
+                align-items: center;
+                gap: 20px;
+                padding: 12px 24px;
+            }
+
+            #nav-container a {
+                text-decoration: none;
+                font-size: 40px;
+                color: #ffffff;
+                transition: transform 0.2s ease;
+            }
+
+            #nav-container a:hover {
+                transform: scale(1.2);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="controls">
+            <div class="search-bar-container">
+                <input id="wordInput" type="text" placeholder="Enter a word for a poem..." />
+                <button id="generateButton">Generate</button>
+                <button id="clearButton">Clear</button>
+            </div>
+            <label for="speedSlider" style="color:white;">Speed</label>
+            <input id="speedSlider" type="range" min="0.5" max="5" step="0.1" value="2" />
+            <select id="themeSelect">
+            <option value="calm">Calm</option>
+            <option value="dreamy">Dreamy</option>
+            <option value="intense">Intense</option>
+            </select>
+        </div>
+
+
+    <div id="header">
+        Assignment Three - 'Text Adventure' in P5.js with Events
+    </div>
+
+    <div id="nav-container">
+        <a href="index.html" title="Go back to homepage">◀</a>
+        <a href="assignment4.html" title="Go to next assignment">▶</a>
+    </div>
+    <script src="assignment3.js"></script>
+    </body>
+</html>
