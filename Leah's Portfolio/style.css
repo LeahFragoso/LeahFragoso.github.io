@@ -26,21 +26,35 @@ html, body {
     top: 40px;
     left: 40px;
     z-index: 200; 
+    display: flex;
+    align-items: center;
   }
   
   .menu-button {
     width: 50px;
     height: 50px;
     cursor: pointer;
+    z-index: 200; 
+    pointer-events: auto;
   }
   
+  .click-text {
+    margin-left: 20px;
+    font-family: 'LemonTuesday', cursive;
+    font-size: 18px;
+    color: #5a4634;
+    cursor: pointer;
+    user-select: none;
+  }
+
+
   .dropdown {
     position: absolute;
     top: 100%;        
     left: 0;
     margin: 8px 0 0;
     padding: 0.5rem 0;
-    background: rgba(255, 248, 220, 0.95);
+    background: rgba(255, 251, 236, 0.95);
     border: 1px solid #d6c3b0;
     border-radius: 6px;
     list-style: none;
@@ -73,7 +87,7 @@ html, body {
     background: rgba(226, 202, 163, 0.3);
   }
 
-  .journal-container {
+.journal-container {
     position: relative;
     width: 690px;   
     transition: all 0.3s ease;
@@ -81,26 +95,26 @@ html, body {
     z-index: 1;
   }
 
-  .journal-image {
-    display: block;
-    width: 100%;
-    transition: all 0.3s ease;
-    height: auto;
-    border-radius: 8px;
-  }
 
- .name-header {
+.journal-image {
+  display: block;
+  width: 100%;
+  transition: all 0.3s ease;
+  height: auto;
+  border-radius: 8px;
+}
+
+.name-header {
     position: absolute;
     top: 55%;       
-    left: 20%;     
-    font-family: 'Canela', sans-serif;  
+    left: 20%;      
+    font-family: 'Canela', sans-serif; 
     font-size: 23px; 
     font-weight: 700;
-    color: #4a392c;    
+    color: #4a392c;   
     letter-spacing: 2px;
     pointer-events: none; 
   }
-
   .email-header {
     position: absolute;
     top: 65%;  
@@ -108,45 +122,43 @@ html, body {
     font-family: 'Canela', sans-serif; 
     font-size: 16px;  
     font-weight: 400;
-    color: #4a392c; 
+    color: #4a392c;  
     text-transform: none;
     letter-spacing: 1px;
     pointer-events: none;  
   }
 
- .journal-container:hover {
+.journal-container:hover {
     transform: scale(1.03) rotate(-0.5deg);
     z-index: 10;
   }
 
 
-  .tabs {
-    position: absolute;
-    top: 21.5%;       
-    left: 11%;
-    width: 100%;
-  }
+.tabs {
+  position: absolute;
+  top: 21.5%;       
+  left: 11%;
+  width: 100%;
+}
 
-
-  .tab-text {
-    position: absolute;
-    pointer-events: auto;   
-    top: 0;
-    transform: translate(-50%, -50%); 
-    border-radius: 4px;
-    text-decoration: none;
-    color: #5a4634;
-    font-family: 'LemonTuesday', sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 0.9rem;
-    transition: background 0.2s;
-  }
-
-  .tab-text:hover {
-    background: rgba(255,248,220,1);
-  }
-  .about-me {
+.tab-text {
+  position: absolute;
+  pointer-events: auto;  
+  top: 0;
+  transform: translate(-50%, -50%); 
+  border-radius: 4px;
+  text-decoration: none;
+  color: #5a4634;
+  font-family: 'LemonTuesday', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.9rem;
+  transition: background 0.2s;
+}
+.tab-text:hover {
+  background: rgba(255,248,220,1);
+}
+.about-me {
     position: absolute;
     top: 160px;             
     left: 50%;            
@@ -158,9 +170,9 @@ html, body {
     border-radius: 10px;
     line-height: 1.6;
     text-align: left;
-  }
+}
 
-  .trinket {
+.trinket {
     position: absolute;
     width: 40px; 
     opacity: 0; 
@@ -172,6 +184,7 @@ html, body {
 
   
   
+
 .t1  { top:  40px; left: -50px; rotate: -20deg; }
 .t2  { top: 100px; left: -10px; rotate:  25deg; }
 .t3  { top: 170px; left: -40px; rotate:  -8deg; }
@@ -182,6 +195,7 @@ html, body {
 .t6  { top: -25px; left: 260px; rotate:  18deg; }
 .t7  { top: -40px; left: 410px; rotate: -13deg; }
 .t8  { top: -18px; left: 600px; rotate:   9deg; }
+
 
 .t9  { top:  70px; right: -40px; rotate:  21deg; }
 .t10 { top: 140px; right:  20px; rotate: -19deg; }
@@ -197,7 +211,6 @@ html, body {
 .t16 { bottom: -30px; left: 150px; rotate:  -9deg; }
 .t17 { bottom: -25px; left: 310px; rotate:  14deg; }
 .t18 { bottom: -35px; left: 470px; rotate: -16deg; }
-
 
 .t19 { bottom:  70px; right:  40px; rotate:   5deg; }
 .t20 { bottom: 160px; right: 100px; rotate: -18deg; }
@@ -240,15 +253,15 @@ html, body {
 .t41 { bottom: -60px; right: 140px; rotate: 20deg; }
 
 
-.tab-text.about   { left: 45.5%; } 
+.tab-text.about   { left: 45.5%; }  
 .tab-text.contact   { left: 56.5%; }  
 
 
 
 .contact-form {
     position: absolute;
-    top: 50%;        
-    left: 67.5%;            
+    top: 50%;              
+    left: 67.5%;             
     transform: translate(-50%, -50%);
     width: 230px;
     font-family: 'Canela', serif;
