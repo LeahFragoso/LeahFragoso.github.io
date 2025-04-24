@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Lab five - JSON</title>
+  <script src="p5.min.js"></script>
+  <script src="lab5.js" defer></script>
+  <style>
+     body {
+      margin: 0;
+      text-align: center;
+      font-family: Arial;
+      background-color: bisque;
+    }
+
+    canvas {
+      display: block;
+      margin: 0 auto;
+    }
+
+    #header {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      font-size: 24px;
+      font-weight: bold;
+      color: saddlebrown;
+      background-color: #ffe5d0;
+      z-index: 10;
+      padding: 10px 15px;
+      border: 2px solid;
+      border-radius: 10px;
+    }
+
+    #nav-container {
+      position: absolute;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      padding: 12px 24px;
+    }
+
+    #nav-container a {
+      text-decoration: none;
+      font-size: 40px;
+      color: #000000;
+      transition: transform 0.2s ease;
+    }
+
+    #nav-container a:hover {
+      transform: scale(1.2);
+    }
+
+    #game-container {
+      position: relative;
+      top: 120px; 
+      padding: 20px;
+    }
+
+    #score-container {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    #player-name-input {
+      margin-top: 10px;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+  <div id="header">
+    Lab Five - JSON
+  </div>
+  <div id="nav-container">
+    <a href="index.html" title="Go back to homepage">◀</a>
+    <a href="index.html" title="End of Labs, Go to back to homepage">▶</a>
+  </div>
+
+  <div id="game-container">
+    <div id="score-container">
+      <p>Click balloons to pop them!</p>
+      <p>Your Name: <input type="text" id="playerName" placeholder="Enter your name" /></p>
+    </div>
+  </div>
+</body>
+</html>
